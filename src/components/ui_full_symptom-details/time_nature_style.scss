@@ -1,0 +1,18 @@
+.container_Time_Nature {
+        height: 100%;
+        display: flex;
+        margin-top: 220px;
+
+        .container-box {
+            display: flex;
+            // justify-content: space-around;
+            align-items: center;
+            .box-time {
+             margin-top: -330px;       
+            }
+            .box {
+                margin: 18px;
+                margin-left: 40px;
+            }
+        }
+}

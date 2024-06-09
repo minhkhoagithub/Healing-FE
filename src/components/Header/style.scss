@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #29ABE2;
+    --text-color: #0F4C81;
+    --text-color-secondary: #DEDEDE;
+}
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Avenir Next';
+}
+
+.container {
+    height: 70px;
+    background-color: white;
+
+    .home-header-content {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        .left-content {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logo {
+                height: 70%;
+                width: 80%;
+                margin-left: 30px;
+                object-fit: cover;
+                
+                img{
+                    height: 100%;
+                    width: 100%;
+                    // object-fit: cover;
+                }
+            }
+        }
+
+        .right-content {
+            width: 43%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .search-box{
+                margin-left: 10px;
+                .wrapper{
+                    height: 50px;
+                    width: 424px;
+                    border-radius: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #E1E8F5;
+                    .icon_search{
+                        font-size: 26px;
+                    }
+
+                    .search{
+                        height: 70%;
+                        width: 80%;
+                        margin-right: 20px;
+                        background-color: #E1E8F5;
+                        outline: none;
+                        border: none;
+                        font-size: 22px;
+                        &:focus{
+                            border-bottom: 1px solid white;
+                        }
+                    }
+                }
+            }
+
+            .btn-content {
+                width: 142px;
+                height: 35px;
+                background-color: #0071BC;
+                border-radius: 20px;
+                // margin-right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn-user {
+                    height: 25px;
+                    width: 25px;
+
+                    .user-icon {
+                        font-size: 15px;
+                        color: var(--primary-color);
+                    }
+
+                    padding: 3px;
+                    border-radius: 50%;
+                    border: 0.1px solid var(--primary-color);
+                    background-color: white;
+                }
+
+                .btn-login {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .center-content {
+            width: 45%;
+            display: flex;
+            align-items: center;
+
+            .header-nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 5px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        margin: 20px;
+                        font-size: 25px;
+                        font-weight: bold;
+                        color: #0F4C81;
+                    }
+                }
+            }
+        }
+    }
+}

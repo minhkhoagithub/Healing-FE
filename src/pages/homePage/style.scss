@@ -1,0 +1,574 @@
+:root {
+    --primary-color: #236899;
+    --text-color: #0F4C81;
+    --text-color-secondary: #DEDEDE;
+}
+
+
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.home-header-container {
+    height: 70px;
+    background-color: var(--primary-color);
+
+    .home-header-content {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        .left-content {
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                height: 70%;
+                width: 80%;
+                background: url('./imge/Logo_we_healing_services.png') center center no-repeat;
+                background-size: cover;
+                margin-left: 30px;
+                border-radius: 33px;
+                border: 1px solid black;
+            }
+        }
+
+        .right-content {
+            width: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .btn-content {
+                width: 80%;
+                height: 35px;
+                background-color: white;
+                border-radius: 20px 0 0 20px;
+                margin-right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn-user {
+                    height: 25px;
+                    width: 25px;
+
+                    .user-icon {
+                        font-size: 15px;
+                        color: var(--primary-color);
+                    }
+
+                    padding: 3px;
+                    border-radius: 50%;
+                    border: 0.1px solid var(--primary-color);
+                    background-color: white;
+                }
+
+                .btn-login {
+                    a {
+                        text-decoration: none;
+                        color: var(--primary-color);
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .center-content {
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .header-nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        margin: 20px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-container {
+    margin: 2px 0;
+    // height: 600px;
+    // border: 2px solid black;
+    background: url('./imge/Image.png') center center no-repeat;
+    background-size: contain;
+
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #ffffff, $alpha: 0.8);
+        height: 100%;
+
+
+        .content-title {
+            h1 {
+                color: var(--text-color);
+                font-size: 75px;
+                text-transform: uppercase;
+                font-weight: 800;
+                margin: 50px 0;
+                letter-spacing: 7px;
+            }
+        }
+
+        .content-subtitles {
+            h3 {
+                color: var(--primary-color);
+                font-size: 45px;
+                font-weight: 400;
+                letter-spacing: 2px;
+                // margin-top: 50px;
+            }
+        }
+
+        .content-btn {
+            margin-top: 50px;
+
+            .btn-diagnosis,
+            .btn-search {
+                height: 30px;
+                width: 170px;
+                background-color: white;
+                border: 1px solid var(--text-color);
+                padding: 15px auto;
+                border-radius: 20px;
+                font-size: 15px;
+                font-weight: bold;
+                color: var(--text-color);
+            }
+
+            .btn-search {
+                margin-left: 20px;
+            }
+
+            .btn-diagnosis {
+                margin-right: 20px;
+            }
+
+            .btn-diagnosis:hover,
+            .btn-search:hover {
+                background-color: var(--primary-color);
+                color: white;
+            }
+
+        }
+
+        .search-info {
+            height: 40px;
+            width: 700px;
+            display: flex;
+            border-radius: 20px;
+            padding: 0 10px;
+            margin: 50px 0 150px 0;
+
+            span {
+                height: 100%;
+                width: 190px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 20px 0 0 20px;
+                border: 5px solid var(--text-color);
+                background: rgba($color: #ffffff, $alpha: 0.6);
+                padding: 0 20px;
+                // margin-left: -10px;
+                color: var(--primary-color);
+            }
+
+            input {
+                border: none;
+                outline: none;
+                height: 100%;
+                width: 500px;
+                padding: 0 15px;
+                background-color: rgba(180, 176, 176, 0.8);
+                font-size: 20px;
+                color: black;
+                border-radius: 0 20px 20px 0;
+            }
+        }
+    }
+}
+
+.footer-container {
+    height: 130px;
+    background-color: var(--primary-color);
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between !important;
+        align-items: center;
+        padding-top: 20px;
+
+        .footer-content-left {
+            margin-left: 10px;
+
+            h3 {
+                text-transform: uppercase;
+                color: var(--text-color);
+                font-size: 50px;
+            }
+        }
+
+        .footer-content-right {
+            margin-right: 10px;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+
+                li {
+                    margin: 0 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-size: 20px;
+                        // font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slider-container {
+    margin: 20px 0;
+    background: url('./imge/Image.jpg') center center no-repeat;
+    background-size: contain;
+    height: 700px;
+
+    .layer-background {
+        height: 100%;
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slider-content {
+            margin-top: -100px;
+
+            .content-title {
+
+                span {
+                    background-color: #EDEDED;
+                    height: 55px;
+                    width: 350px;
+                    border-radius: 25px;
+                    font-size: 35px;
+                    color: var(--primary-color);
+                    font-weight: bold;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                    padding: 0 20px;
+                    margin-left: 0;
+                }
+            }
+
+            .content-form {
+                background-color: #EDEDED;
+                border-radius: 30px;
+                margin-top: 15px;
+
+                table {
+                    width: 800px;
+                    padding: 30px;
+
+                    .input-text {
+                        height: 50px;
+                        width: 100%;
+                        margin: 10px 0;
+                        border: none;
+                        outline: none;
+                        border-radius: 20px;
+                        padding: 0 20px;
+                        color: var(--text-color-secondary);
+
+                        input {
+                            height: 100%;
+                            width: 100%;
+                            padding: 0 20px;
+                            border: none;
+                            outline: none;
+                            border-radius: 20px;
+                            background-color: white;
+                            font-size: 20px;
+
+                        }
+
+                        input::placeholder {
+                            color: var(--text-color-secondary);
+                        }
+                    }
+
+                    label {
+                        margin-left: 70px;
+                        margin-top: -20px;
+                        font-size: 15px;
+                        color: rgb(172, 167, 167);
+                    }
+
+                    select {
+                        height: 50px;
+                        width: 60%;
+                        margin: 0 20px;
+                        border: none;
+                        outline: none;
+                        border-radius: 20px;
+                        padding: 0 20px;
+                        background-color: white;
+                        font-size: 20px;
+                        // color: var(--text-color-secondary);
+                        appearance: none;
+                        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>');
+                        background-repeat: no-repeat;
+                        background-position: right .7em top 50%, 0 0;
+                        background-size: 15px;
+                    }
+
+                    .btn-continue {
+                        border: solid 5px var(--primary-color);
+                        background-color: white;
+                        color: var(--primary-color);
+                        font-size: 25px;
+                        font-weight: bold;
+                        border-radius: 20px;
+                        height: 50px;
+                        width: 50%;
+                        margin-left: 60px;
+                    }
+
+                    .btn-continue:hover {
+                        background-color: var(--primary-color);
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slider-content_symptoms {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .left-content {
+        margin-right: 5px;
+        background-color: var(--text-color-secondary);
+        border-radius: 33px;
+        padding: 20px;
+        width: 500px;
+
+        .content-title {
+            h1 {
+                height: 50px;
+                color: var(--primary-color);
+                font-size: 35px;
+                font-weight: bold;
+
+            }
+        }
+
+        .text-input {
+            width: 100%;
+
+            .textarea {
+                width: 100%;
+                height: 150px;
+                border: none;
+                outline: none;
+                border-radius: 20px;
+                padding: 20px;
+                font-size: 20px;
+                // color: var(--text-color-secondary);
+                background-color: white;
+
+                &.small {
+                    height: 70px !important;
+                    border: none;
+                    outline: none;
+                    border-radius: 20px;
+                    padding: 20px;
+                    font-size: 20px;
+                    // color: var(--text-color-secondary);
+                    background-color: white;
+                }
+            }
+
+
+        }
+
+        .new_textarea {
+            margin-top: 10px;
+            width: 100%;
+            height: 300px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 20px;
+            // color: var(--text-color-secondary);
+            background-color: white;
+        }
+
+        .btn-more_symptoms {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            width: 35%;
+            background-color: white;
+            border: 2px solid var(--primary-color);
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 20px;
+
+            button {
+                border-radius: 50%;
+                border: none;
+                background-color: white;
+                color: var(--primary-color);
+                font-size: 15px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            button:hover {
+                color: white;
+                background-color: var(--primary-color);
+            }
+        }
+    }
+
+    .right-content {
+        background-color: var(--text-color-secondary);
+        border-radius: 33px;
+        width: 500px;
+        margin-left: 5px;
+
+        .content-title {
+            padding-bottom: 30px;
+
+            h1 {
+                height: 50px;
+                width: 70%;
+                margin-left: 0;
+                padding: 10px;
+                background-color: var(--primary-color);
+                font-size: 25px;
+                font-weight: bold;
+                color: white;
+                border-radius: 33px 0 33px 0;
+            }
+        }
+
+        .content-symptoms {
+            padding: 10px 60px;
+
+            .symptoms {
+                height: 50px;
+                width: 100%;
+                outline: none;
+                border: none;
+                border-radius: 20px;
+                background-color: white;
+                padding-left: 20px;
+            }
+
+            input::placeholder {
+                color: var(--text-color-secondary);
+            }
+        }
+
+        .btn-diagnosis {
+            display: flex;
+            align-items: end;
+            justify-content: flex-end;
+            padding: 20px 10px 30px 0;
+
+            button {
+                height: 30px;
+                background-color: var(--primary-color);
+                color: white;
+                border-radius: 20px;
+                outline: none;
+                border: none;
+                padding: 0 20px;
+                font-size: 17px;
+                margin-right: 0;
+                font-weight: bold;
+
+            }
+
+            button:hover {
+                background-color: var(--text-color);
+                color: var(--text-color-secondary);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.content {
+    background-color: var(--text-color-secondary);
+    border-radius: 33px;
+    padding: 20px 60px;
+    width: 40%;
+    height: 65%;
+
+    .content-title {
+        h1 {
+            height: 50px;
+            color: var(--primary-color);
+            font-size: 35px;
+            font-weight: bold;
+            margin: 20px;
+        }
+    }
+
+    .output_text {
+        width: 100%;
+        textarea {
+            width: 100%;
+            height: 300px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 20px;
+            color: var(--text-color-secondary);
+            background-color: white;
+        }
+    }
+}

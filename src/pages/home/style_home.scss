@@ -1,0 +1,392 @@
+:root {
+    --primary-color: #29ABE2;
+    --text-color-secondary: #DEDEDE;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Avenir Next";
+}
+
+.home-container {
+    background-color: #ffffff;
+    font-family: "Avenir Next" !important;
+    height: 87vh;
+    padding-bottom: 13vh;
+
+    .header {
+        margin-top: 65px;
+        // height: 140px;
+        display: flex;
+        align-items: center;
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+            // margin-top: 65px;
+
+            li {
+                list-style: none;
+
+                .nav-link {
+                    font-family: "Avenir Next";
+
+                    text-decoration: none;
+                    margin: 0 30px ;
+                    font-size: 28px;
+                    font-weight: bold;
+                    color: #0071BC;
+                }
+            }
+        }
+
+        .user {
+            width: 182px;
+            height: 55px;
+            background-color: #0071BC;
+            border-radius: 30px;
+            margin: 0 30px 0 67.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .btn-user {
+                height: 25px;
+                width: 25px;
+
+                .user-icon {
+                    font-size: 15px;
+                    color: var(--primary-color);
+                }
+
+                padding: 3px;
+                border-radius: 50%;
+                border: 0.1px solid var(--primary-color);
+                background-color: white;
+            }
+
+            .btn-login {
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .logo {
+            width: 269px;
+            height: 150px;
+            object-fit: cover;
+            position: absolute;
+            margin-top: 62px;
+            // margin-left: 66px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .home-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            width: 50%;
+
+            .block_text_logo {
+                width: 716px;
+                height: 224px;
+                padding: 30px;
+                background-color: #DEDEDE;
+                border-radius: 30px;
+                margin-right: 0;
+                margin-left: 273px;
+                .img {
+                    // margin-top: 100px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                p {
+                    color: var(--primary-color);
+                    font-size: 30px;
+                    font-weight: bold;
+
+                }
+
+                &::before {
+                    position: absolute;
+                    left: 100%;
+                    top: 100%;
+                    width: 40px;
+                    height: 40px;
+                    background-color: red;
+                    border-top: 13px solid transparent;
+                    border-right: 26px solid red;
+                    border-bottom: 13px solid transparent;
+                }
+            }
+
+
+
+            .block_btn {
+                width: 309px;
+                height: 89px;
+                margin-top: 51px;
+                font-family: "Avenir Next";
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #29ABE2;
+
+                border-radius: 50px;
+
+                padding: 15px;
+                margin-left: 473px;
+
+                .btn-start {
+                    height: 100%;
+                    width: 100%;
+                    background-color: #29ABE2;
+                    color: white;
+                    outline: none;
+                    border: none;
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+            }
+
+            .block_search{
+                width: 646px;
+                height: 85px;
+                margin-top: 181px;
+                margin-left: 311px;
+                border-radius: 50px;
+                background-color: #efefef;
+                padding: 15px;
+                position: relative;
+                box-shadow:2px 2px 2px #f9f9f9, -2px -2px 2px #00000026;
+                input{
+                    width: 80%;
+                    height: 65%;
+                    // padding: 20px;
+                    right: 30px;
+                    // margin-right: 0;
+                    position: absolute;
+                    outline: none;
+                    border: none;
+                    font-size: 32px;
+                    // background-color: #DEDEDE;
+                    background-color: #efefef;
+
+                }
+                .icon_search{
+                    font-size: 45px;
+                    margin-left: 20px;
+                }
+            }
+
+
+        }
+
+        .right {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+
+            .img {
+                width: 70%;
+                // height: 350px;
+                object-fit: cover;
+                margin-left: 0;
+                margin-top: 137px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+
+
+        }
+    }
+
+    
+}
+
+$tablet: 768px;
+$desktop: 992px;
+$largeDesktop: 1280px;
+$extraDesktop: 1439px;
+$extraLargeDesktop: 1919px; // Thêm breakpoint cho màn hình lớn hơn 1920px
+
+// Sử dụng mixin để tạo ra các media query
+@mixin respond-to($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+  @include respond-to($extraLargeDesktop) {
+    .home-container{
+        .header {
+            margin-top: 50px;
+            .header-nav{
+                li{
+                    .nav-link{
+                        font-size: 25px;
+                        margin: 0 30px;
+                    }
+                }
+            }
+
+            .user{
+                height: 40px;
+                width: 150px;
+                .btn-user{
+                    .user-icon{
+                        
+                    }
+                }
+
+                .btn-login{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .logo{
+                width: 200px;
+                height: 100px;
+                margin-top: 30px;
+            }
+        }
+        .home-content{
+            margin-top: 20px;
+            .left{
+                // margin-top: 20px;
+                .block_text_logo{
+                    // margin-top: -50px;
+                    width: 600px;
+                    height: 200px;
+                    margin-left: 290px;
+                    p{
+                        font-size: 25px;
+                    }
+                }
+
+                .block_btn{
+                    width: 250px;
+                    height: 75px;
+                    margin-top: 50px;
+                    margin-left: 450px;
+                    .btn-start{
+                        font-size: 25px;
+                    }
+                }
+                .block_search{
+                    width: 600px;
+                    height: 75px;
+                    margin-top: 100px;
+                    margin-left: 270px;
+                    input{
+                        font-size: 25px;
+                    }
+                    .icon_search{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include respond-to($extraDesktop) {
+    .home-container{
+        .header {
+            margin-top: 30px;
+            .header-nav{
+                li{
+                    .nav-link{
+                        font-size: 20px;
+                        margin: 0 20px;
+                    }
+                }
+            }
+
+            .user{
+                height: 40px;
+                width: 150px;
+                .btn-user{
+                    .user-icon{
+                        
+                    }
+                }
+
+                .btn-login{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .logo{
+                width: 200px;
+                height: 100px;
+                margin-top: 30px;
+            }
+        }
+        .home-content{
+            .left{
+                .block_text_logo{
+                    margin-top: 30px;
+                    width: 500px;
+                    height: 150px;
+                    margin-left: 220px;
+                    p{
+                        font-size: 25px;
+                    }
+                }
+
+                .block_btn{
+                    width: 200px;
+                    height: 60px;
+                    margin-top: 30px;
+                    margin-left: 350px;
+                    .btn-start{
+                        font-size: 20px;
+                    }
+                }
+                .block_search{
+                    width: 500px;
+                    height: 60px;
+                    margin-top: 100px;
+                    margin-left: 190px;
+                    input{
+                        font-size: 25px;
+                    }
+                    .icon_search{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
